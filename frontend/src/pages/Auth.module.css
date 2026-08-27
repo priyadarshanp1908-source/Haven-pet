@@ -1,0 +1,370 @@
+.authContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff6f6;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(239, 68, 68, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(225, 29, 72, 0.15) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240' fill='none'%3E%3Cg transform='translate(15,15) scale(0.7)'%3E%3Cpath d='M15,25Q5,10 2,30Q0,50 15,42Q30,45 45,42Q60,50 58,30Q55,10 45,25Q30,15 15,25Z' fill='rgba(220,38,38,0.08)' stroke='%23dc2626' stroke-width='2.2' stroke-linejoin='round'/%3E%3Ccircle cx='20' cy='30' r='2.5' fill='%23b91c1c'/%3E%3Ccircle cx='40' cy='30' r='2.5' fill='%23b91c1c'/%3E%3Cellipse cx='30' cy='37' rx='4.5' ry='3' fill='%23b91c1c'/%3E%3Cpath d='M30,40Q25,45 20,42M30,40Q35,45 40,42' stroke='%23b91c1c' stroke-width='2' fill='none'/%3E%3C/g%3E%3Cg transform='translate(135,15) scale(0.7)'%3E%3Cpath d='M10,22L5,5 25,15Q30,12 35,15L55,5 50,22Q60,35 50,48Q30,55 10,48Q0,35 10,22Z' fill='rgba(225,29,72,0.08)' stroke='%23e11d48' stroke-width='2.2' stroke-linejoin='round'/%3E%3Ccircle cx='20' cy='32' r='2.5' fill='%239f1239'/%3E%3Ccircle cx='40' cy='32' r='2.5' fill='%239f1239'/%3E%3Cpolygon points='30,38 26,34 34,34' fill='%239f1239'/%3E%3Cpath d='M30,38Q26,43 21,40M30,38Q34,43 39,40' stroke='%239f1239' stroke-width='1.8' fill='none'/%3E%3Cpath d='M12,35L2,33M12,39L4,41M48,35L58,33M48,39L56,41' stroke='%23e11d48' stroke-width='1.5'/%3E%3C/g%3E%3Cg transform='translate(15,135) scale(0.7)'%3E%3Cpath d='M15,25Q5,10 2,30Q0,50 15,42Q30,45 45,42Q60,50 58,30Q55,10 45,25Q30,15 15,25Z' fill='rgba(239,68,68,0.06)' stroke='%23ef4444' stroke-width='2' stroke-linejoin='round'/%3E%3Ccircle cx='20' cy='30' r='2.5' fill='%23dc2626'/%3E%3Ccircle cx='40' cy='30' r='2.5' fill='%23dc2626'/%3E%3Cellipse cx='30' cy='37' rx='4.5' ry='3' fill='%23dc2626'/%3E%3Cpath d='M30,40Q25,45 20,42M30,40Q35,45 40,42' stroke='%23dc2626' stroke-width='1.8' fill='none'/%3E%3Cpath d='M22,26Q18,22 14,25M38,26Q42,22 46,25' stroke='%23ef4444' stroke-width='1.5' fill='none'/%3E%3C/g%3E%3Cg transform='translate(135,135) scale(0.65)'%3E%3Cpath d='M15,25C10,12 5,0 12,0C18,0 22,12 24,23C28,12 32,0 38,0C45,0 40,12 35,25C50,30 52,48 40,55C25,60 10,55 10,40Z' fill='rgba(225,29,72,0.08)' stroke='%23e11d48' stroke-width='2.2' stroke-linejoin='round'/%3E%3Ccircle cx='20' cy='38' r='2.5' fill='%239f1239'/%3E%3Ccircle cx='36' cy='38' r='2.5' fill='%239f1239'/%3E%3Cpolygon points='28,43 25,40 31,40' fill='%239f1239'/%3E%3Cpath d='M28,43Q24,47 20,45M28,43Q32,47 36,45' stroke='%239f1239' stroke-width='1.8' fill='none'/%3E%3C/g%3E%3Cg transform='translate(92,90) scale(0.6)' fill='%23f9a8d4'%3E%3Cellipse cx='25' cy='30' rx='13' ry='10'/%3E%3Ccircle cx='12' cy='14' r='4.5'/%3E%3Ccircle cx='22' cy='10' r='4.5'/%3E%3Ccircle cx='32' cy='11' r='4.5'/%3E%3Ccircle cx='39' cy='17' r='4'/%3E%3C/g%3E%3Cg transform='translate(88,18) scale(0.4)' fill='%23f9a8d4'%3E%3Cellipse cx='25' cy='30' rx='13' ry='10'/%3E%3Ccircle cx='12' cy='14' r='4.5'/%3E%3Ccircle cx='22' cy='10' r='4.5'/%3E%3Ccircle cx='32' cy='11' r='4.5'/%3E%3Ccircle cx='39' cy='17' r='4'/%3E%3C/g%3E%3Cg transform='translate(88,165) scale(0.4)' fill='%23f9a8d4'%3E%3Cellipse cx='25' cy='30' rx='13' ry='10'/%3E%3Ccircle cx='12' cy='14' r='4.5'/%3E%3Ccircle cx='22' cy='10' r='4.5'/%3E%3Ccircle cx='32' cy='11' r='4.5'/%3E%3Ccircle cx='39' cy='17' r='4'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: auto, auto, 240px 240px;
+  padding: 1.5rem;
+}
+
+.authCard {
+  width: 100%;
+  max-width: 440px;
+  background: #ffffff;
+  backdrop-filter: var(--blur-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  box-shadow: 0 20px 50px rgba(220, 38, 38, 0.08);
+  animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brandHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.authLogoImg {
+  width: 72px;
+  height: 72px;
+  filter: drop-shadow(0 6px 12px rgba(4, 120, 87, 0.25));
+  transition: transform 0.3s ease;
+}
+
+.authLogoImg:hover {
+  transform: scale(1.05);
+}
+
+.logoBadge {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--grad-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+  color: white;
+  box-shadow: var(--shadow-glow);
+}
+
+.brandHeader h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.35rem;
+  color: var(--text-main, #0f172a);
+}
+
+.brandHeader p {
+  font-size: 0.9rem;
+  color: var(--text-muted, #64748b);
+}
+
+.errorAlert {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #dc2626;
+  font-size: 0.875rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.successAlert {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #059669;
+  font-size: 0.875rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.otpHintBanner {
+  background: #f0fdf4;
+  border: 1px dashed #34d399;
+  color: #065f46;
+  padding: 0.6rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fieldGroup label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.forgotLink {
+  background: none;
+  border: none;
+  color: var(--primary, #dc2626);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.forgotLink:hover {
+  text-decoration: underline;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-dim, #94a3b8);
+}
+
+.inputWrapper input {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: var(--text-main);
+  padding: 0.75rem 1rem 0.75rem 2.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.inputWrapper input:focus {
+  border-color: var(--primary, #dc2626);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+.otpInput {
+  letter-spacing: 0.25rem;
+  font-weight: 700;
+  font-size: 1.1rem !important;
+}
+
+.submitBtn {
+  margin-top: 0.5rem;
+  width: 100%;
+  background: var(--grad-primary, linear-gradient(135deg, #dc2626, #e11d48));
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.85rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.25);
+  border: none;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.authFooter {
+  margin-top: 1.75rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.authFooter a {
+  color: var(--primary);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.authFooter a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+.resendRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.825rem;
+  color: var(--text-muted, #64748b);
+  margin-top: 0.25rem;
+}
+
+.resendBtn {
+  background: none;
+  border: none;
+  color: var(--primary, #dc2626);
+  font-weight: 600;
+  font-size: 0.825rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.resendBtn:hover {
+  background: rgba(220, 38, 38, 0.08);
+}
+
+.resendBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/* Modal Styling */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1.5rem;
+  animation: fadeIn 0.25s ease;
+}
+
+.modalContent {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: #f1f5f9;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.closeBtn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.modalHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.modalIconBadge {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #fee2e2;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+}
+
+.modalHeader h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+  color: #0f172a;
+}
+
+.modalHeader p {
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.modalActionButtons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.secondaryModalBtn {
+  flex: 1;
+  background: #f1f5f9;
+  color: #334155;
+  font-weight: 600;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.secondaryModalBtn:hover {
+  background: #e2e8f0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

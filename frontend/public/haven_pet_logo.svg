@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="50%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+    <linearGradient id="heartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="houseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a7f3d0" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Circle Container -->
+  <circle cx="256" cy="256" r="240" fill="url(#bgGrad)" stroke="#34d399" stroke-width="8"/>
+  
+  <!-- Outer Ring Accent -->
+  <circle cx="256" cy="256" r="226" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-dasharray="8 6" opacity="0.4"/>
+
+  <!-- House Silhouette background -->
+  <path d="M 256 100 L 400 230 V 410 H 112 V 230 Z" fill="url(#houseGrad)" stroke="#6ee7b7" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- Heart Icon Top Center -->
+  <path d="M 256 155 C 240 120 190 120 175 155 C 160 190 256 240 256 240 C 256 240 352 190 337 155 C 322 120 272 120 256 155 Z" fill="url(#heartGrad)" stroke="#ecfdf5" stroke-width="3"/>
+
+  <!-- Leaf Accent near heart -->
+  <path d="M 345 130 C 370 120 385 140 375 160 C 355 165 340 145 345 130 Z" fill="#34d399" stroke="#064e3b" stroke-width="2"/>
+  <path d="M 348 135 L 368 152" stroke="#064e3b" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Dog Silhouette (Left) -->
+  <g fill="#ecfdf5" stroke="#064e3b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Dog Head & Ears -->
+    <path d="M 160 260 C 145 250 125 265 130 295 C 135 315 155 325 175 320 C 190 315 210 295 200 270 C 195 255 175 250 160 260 Z"/>
+    <!-- Dog Floppy Ear -->
+    <path d="M 140 265 C 120 270 110 300 125 320 C 135 310 135 285 140 265 Z" fill="#d1fae5"/>
+    <!-- Dog Eye & Snout -->
+    <circle cx="178" cy="278" r="4" fill="#064e3b" stroke="none"/>
+    <path d="M 195 285 C 205 288 208 295 200 300 C 192 305 185 295 195 285 Z" fill="#064e3b"/>
+    <!-- Dog Smile -->
+    <path d="M 188 300 Q 195 310 200 302" fill="none" stroke="#064e3b" stroke-width="3.5"/>
+    <!-- Dog Body -->
+    <path d="M 145 310 C 130 340 120 380 125 420 L 170 420 C 175 390 180 350 190 320 Z"/>
+    <path d="M 180 330 C 190 360 200 390 205 420 L 235 420 C 230 380 220 340 205 315 Z"/>
+  </g>
+
+  <!-- Cat Silhouette (Right) -->
+  <g fill="#d1fae5" stroke="#064e3b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Cat Head -->
+    <path d="M 310 280 C 290 280 280 300 285 320 C 290 335 310 345 330 340 C 350 335 360 315 350 295 C 340 280 325 280 310 280 Z"/>
+    <!-- Pointy Ears -->
+    <path d="M 292 285 L 285 250 L 308 275 Z" fill="#a7f3d0"/>
+    <path d="M 335 282 L 350 250 L 342 278 Z" fill="#a7f3d0"/>
+    <!-- Cat Eyes -->
+    <circle cx="305" cy="305" r="3.5" fill="#064e3b" stroke="none"/>
+    <circle cx="330" cy="303" r="3.5" fill="#064e3b" stroke="none"/>
+    <!-- Cat Nose & Mouth -->
+    <polygon points="317,312 321,312 319,316" fill="#064e3b" stroke="none"/>
+    <path d="M 314 318 Q 319 324 324 318" fill="none" stroke="#064e3b" stroke-width="2.5"/>
+    <!-- Cat Body -->
+    <path d="M 295 335 C 285 360 280 390 285 420 L 320 420 C 325 390 325 360 320 338 Z"/>
+    <path d="M 325 340 C 335 365 345 390 355 420 L 385 420 C 375 385 360 350 345 335 Z"/>
+    <!-- Cat Tail -->
+    <path d="M 375 390 C 410 380 415 320 395 300 C 385 290 375 310 385 325 C 395 340 390 375 370 382 Z" fill="#34d399"/>
+  </g>
+</svg>
