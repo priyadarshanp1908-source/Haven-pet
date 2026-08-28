@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { usePet } from '../context/PetContext';
-import api from '../services/api';
+import api, { API_URL } from '../services/api';
 import { Dog, Upload, Plus, Calendar, Weight, Syringe, Pill, Edit2, Save, Trash2 } from 'lucide-react';
 import styles from './PetProfile.module.css';
 
@@ -139,7 +139,7 @@ export default function PetProfile() {
           <div className={styles.avatarWrapper}>
             <div className={styles.avatar}>
               {activePet.photo_url ? (
-                <img src={`http://localhost:8000${activePet.photo_url}`} alt={activePet.name} />
+                <img src={`${API_URL}${activePet.photo_url}`} alt={activePet.name} />
               ) : (
                 <Dog size={48} />
               )}

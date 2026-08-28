@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { usePet } from '../context/PetContext';
 import { useNavigate, Link } from 'react-router-dom';
-import api from '../services/api';
+import api, { API_URL } from '../services/api';
 import { StatCard, ReminderCard, RecommendationCard } from '../components/Cards/Cards';
 import { 
   Dog, 
@@ -87,7 +87,7 @@ export default function Dashboard() {
       <div className={styles.petBanner}>
         <div className={styles.bannerAvatar}>
           {activePet?.photo_url ? (
-            <img src={`http://localhost:8000${activePet.photo_url}`} alt={activePet.name} />
+            <img src={`${API_URL}${activePet.photo_url}`} alt={activePet.name} />
           ) : (
             <Dog size={36} />
           )}

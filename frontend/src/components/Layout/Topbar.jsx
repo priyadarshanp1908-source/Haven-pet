@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { usePet } from '../../context/PetContext';
 import { useNavigate } from 'react-router-dom';
 import { Dog, Bell, ChevronDown, Plus } from 'lucide-react';
-import api from '../../services/api';
+import api, { API_URL } from '../../services/api';
 import styles from './Topbar.module.css';
 
 export default function Topbar() {
@@ -66,7 +66,7 @@ export default function Topbar() {
           <div className={styles.activePetChip} onClick={() => navigate(`/pets`)}>
             <div className={styles.chipAvatar}>
               {activePet.photo_url ? (
-                <img src={`http://localhost:8000${activePet.photo_url}`} alt={activePet.name} />
+                <img src={`${API_URL}${activePet.photo_url}`} alt={activePet.name} />
               ) : (
                 <Dog size={16} />
               )}
