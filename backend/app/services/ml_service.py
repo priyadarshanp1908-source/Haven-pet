@@ -26,7 +26,11 @@ class MLService:
     def _load_trained_model(self):
         """Load trained pet breed ML classifier model from disk if available."""
         import os
-        import joblib
+        try:
+            import joblib
+        except ImportError:
+            logger.warning("[ML SERVICE] joblib not installed — trained ML model disabled")
+            return
 
         model_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "ml", "pet_breed_model.joblib")
         if os.path.exists(model_path):
