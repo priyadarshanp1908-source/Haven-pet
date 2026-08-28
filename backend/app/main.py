@@ -91,7 +91,7 @@ app.include_router(reports.router, prefix=API_PREFIX, tags=["Reports"])
 app.include_router(ml.router, prefix=API_PREFIX, tags=["ML"])
 
 
-@app.get("/", tags=["Health"])
+@app.api_route("/", methods=["GET", "HEAD"], tags=["Health"])
 async def root():
     """Health check endpoint."""
     return {"status": "ok", "app": "Haven Pet", "version": "1.0.0"}
