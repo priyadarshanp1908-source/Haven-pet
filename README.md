@@ -51,19 +51,26 @@ cp .env.example .env
 # Edit .env with your settings (JWT_SECRET is required, ANTHROPIC_API_KEY optional)
 ```
 
-### 2. Backend setup
+### 2. Start Both Backend & Frontend (One Command)
+```bash
+npm run dev
+# Or double-click start-dev.bat (Windows)
+```
+This automatically boots both:
+- Backend: `http://localhost:8000` (FastAPI)
+- Frontend: `http://localhost:5173` (Vite SPA with auto-proxy)
+
+### 3. (Alternative) Run Individually
+**Backend:**
 ```bash
 cd backend
-pip install -r requirements.txt
-alembic upgrade head          # Run migrations
-uvicorn app.main:app --reload # Start at http://localhost:8000
+uvicorn app.main:app --reload --port 8000
 ```
 
-### 3. Frontend setup
+**Frontend:**
 ```bash
 cd frontend
-npm install
-npm run dev                   # Start at http://localhost:5173
+npm run dev
 ```
 
 ### 4. (Optional) Docker

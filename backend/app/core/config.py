@@ -3,13 +3,17 @@ Haven Pet — Core configuration.
 Loads all settings from environment variables / .env file.
 """
 
+from pathlib import Path
+from pydantic import field_validator
 from pydantic_settings import BaseSettings
 from typing import Optional
+
+BACKEND_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 class Settings(BaseSettings):
     # Database
-    DATABASE_URL: str = "sqlite+aiosqlite:///./haven_pet.db"
+    DATABASE_URL: str = f"sqlite+aiosqlite:///{BACKEND_DIR.as_posix()}/haven_pet.db"
 
     # JWT
     JWT_SECRET: str = "change-me-in-production"
@@ -36,7 +40,22 @@ class Settings(BaseSettings):
     EMAIL_FROM: str = "noreply@havenpet.com"
 
     # Upload directory
-    UPLOAD_DIR: str = "uploads"
+    UPLOAD_DIR: str = str(BACKEND_DIR / "uploads")
+
+    @field_validator("DATABASE_URL", mode="after")
+    @classmethod
+    def normalize_sqlite_url(cls, v: str) -> str:
+        if v.startswith("sqlite+aiosqlite:///./"):
+            db_name = v.split("sqlite+aiosqlite:///./")[-1]
+            return f"sqlite+aiosqlite:///{BACKEND_DIR.as_posix()}/{db_name}"
+        return v
+
+    @field_validator("UPLOAD_DIR", mode="after")
+    @classmethod
+    def normalize_upload_dir(cls, v: str) -> str:
+        if not Path(v).is_absolute():
+            return str(BACKEND_DIR / v)
+        return v
 
     model_config = {
         "env_file": ".env",

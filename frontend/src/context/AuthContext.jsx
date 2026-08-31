@@ -17,9 +17,10 @@ export const AuthProvider = ({ children }) => {
         setUser(null);
       }
     } catch (err) {
-      console.error('Failed to fetch user:', err);
-      localStorage.removeItem('access_token');
-      localStorage.removeItem('refresh_token');
+      if (err.response?.status === 401) {
+        localStorage.removeItem('access_token');
+        localStorage.removeItem('refresh_token');
+      }
       setUser(null);
     } finally {
       setLoading(false);

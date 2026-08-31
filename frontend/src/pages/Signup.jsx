@@ -22,7 +22,11 @@ export default function Signup() {
       await signup(name, email, password);
       navigate('/');
     } catch (err) {
-      setError(err.response?.data?.detail || 'Signup failed. Please try again.');
+      if (!err.response) {
+        setError('Cannot connect to backend server. Please make sure the backend is running on port 8000.');
+      } else {
+        setError(err.response?.data?.detail || 'Signup failed. Please try again.');
+      }
     } finally {
       setLoading(false);
     }

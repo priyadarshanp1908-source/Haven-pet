@@ -1,0 +1,16 @@
+{
+  "name": "haven-pet",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Haven Pet — AI-Powered Pet Care Assistant",
+  "scripts": {
+    "dev": "node run_dev.cjs",
+    "dev:backend": "python -m uvicorn app.main:app --reload --port 8000 --app-dir backend",
+    "dev:frontend": "npm run dev:frontend --prefix frontend",
+    "seed": "python -m app.seed",
+    "build": "npm run build --prefix frontend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

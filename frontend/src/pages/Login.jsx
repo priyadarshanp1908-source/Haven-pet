@@ -21,7 +21,11 @@ export default function Login() {
       await login(email, password);
       navigate('/');
     } catch (err) {
-      setError(err.response?.data?.detail || 'Login failed. Please check credentials.');
+      if (!err.response) {
+        setError('Cannot connect to backend server. Please make sure the backend is running on port 8000.');
+      } else {
+        setError(err.response?.data?.detail || 'Login failed. Please check credentials.');
+      }
     } finally {
       setLoading(false);
     }
